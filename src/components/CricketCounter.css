@@ -1,0 +1,289 @@
+.CalculatorBody
+{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    width: 25vw;
+    min-width: 10cm;
+    min-height: 15cm;
+    height: 75vh;
+    background: #00000069;
+    border-radius: 0.39cm;
+    box-shadow: 0px 0px 1vw 0.1vw #101010;
+    border: 0.2vw solid rgba(0, 255, 255, 0.22);
+    overflow: hidden;
+}
+
+.CalculatorHeading
+{
+    display: flex;
+    align-items: end;
+    gap: 3%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #EEE;
+    /* background-color: green; */
+    font-size: xx-large;
+    text-align: left;
+    margin: 4%;
+    margin-top: 1%;
+    height: 8%;
+}
+
+.CalculatorHeading > img{
+    aspect-ratio: 1;
+    height: 75%;
+}
+
+.OperandAndOperator
+{
+    display: flex;
+    flex-direction: row;
+    /* background-color: cyan; */
+    color: #DDD;
+    height: 7%;
+    justify-content: flex-end;
+    gap: 2%;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.Operand
+{
+/* background-color: red; */
+width: fit-content;
+font-size: 1.25em;
+}
+
+
+.Operator
+{
+/* background-color: pink; */
+width: fit-content;
+font-size: 1.25em;
+}
+
+.MessageBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 15%;
+    width: 94%;
+    border: 0.5vh dashed rgb(0, 107, 117);
+    margin-top: 3vh;
+    align-self: center;
+    border-radius: 0.25cm;
+}
+
+.MessageBox > * {
+    margin-top: 3vh;
+}
+
+.Display
+{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+display: flex;
+margin: 5%;
+margin-top: 0;
+font-size: 2em;
+overflow: hidden;
+color: white;
+height: 10%;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.DisplayScorecards
+{
+display: flex;
+margin: 5%;
+margin-top: 0;
+font-size: 2em;
+overflow: scroll;
+overflow-y: hidden;
+color: white;
+height: 15%;
+align-items: center;
+justify-content: end;
+flex-direction: row-reverse;
+overflow: auto;
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+
+  
+.DisplayScorecards::-webkit-scrollbar {
+    display: none;
+}
+
+.Scorecard
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    width: 21%;
+    aspect-ratio: 1;
+    background-color: #0034364c;
+    color: white;
+    border: 0.1vw solid black;
+    border-radius: 10%;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    user-select: none; 
+    flex-shrink: 0;
+}
+
+
+.ButtonLayout
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 2%;
+    align-items: center;
+    width: 100%;
+    height:fit-content;
+}
+
+
+
+
+.ButtonRow
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 50%;
+    gap: 1%;
+}
+
+.Button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    width: 25%;
+    aspect-ratio: 1;
+    background-color: #0034364c;
+    color: white;
+    border: 0.1vw solid black;
+    border-radius: 10%;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    user-select: none; 
+}
+
+.Button:hover{
+    box-shadow: 0px 0px 1vh 0px cyan;
+}
+
+
+.Button:active{
+    transform: scale(0.95);
+    transition-duration: 0s;
+    box-shadow: 0px 0px 0.2vh 0px rgb(0, 90, 106);
+    background-color: #5aacb4;
+}
+
+
+.EqualsButton:active{
+    transform: scale(0.95);
+    box-shadow: 0px 0px 1vh 0px cyan;
+    background-color: #224245;
+}
+
+.ClearButton:active{
+    transform: scale(0.95);
+    box-shadow: 0px 0px 1vh 0px red;
+    background-color: #452222;
+}
+
+
+
+.EqualsButton{
+    background-color: rgba(0, 183, 255, 0.821);
+}
+
+.OperatorButton
+{
+    background-color: rgb(0, 61, 80);
+}
+
+.ClearButton
+{
+    background-color: rgb(191, 0, 0);
+}
+
+.ClearButton:hover{
+    box-shadow: 0px 0px 1vh 0.1vh red;
+}
+
+
+
+.ResetButton
+{
+    background-color: rgb(191, 0, 0);
+    aspect-ratio: 8;
+    height: 100%;
+    width: unset;
+    border-radius: 0.25cm;
+}
+
+.ResetButton:hover{
+    box-shadow: 0px 0px 1vh 0.1vh red;
+}
+
+
+@media (orientation: portrait)
+{
+
+    .CalculatorBody
+    {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        width: 95vw;
+        min-width: 8cm;
+        max-width: 13cm;
+        min-height: 15cm;
+        height: 70vh;
+        background: #00000069;
+        border-radius: 0.39cm;
+        box-shadow: 0px 0px 1vw 0.1vw #101010;
+        border: 0.2vw solid rgba(0, 255, 255, 0.22);
+        overflow: hidden;
+    }
+
+
+.Button:active{
+    transform: scale(0.95);
+    transition-duration: 0s;
+    box-shadow: 0px 0px 1vh 0px cyan;
+    background-color: #5aacb4;
+}
+
+.EqualsButton:active{
+    transform: scale(0.95);
+    transition-duration: 0s;
+    box-shadow: 0px 0px 1vh 0px cyan;
+    background-color: #224245;
+}
+
+
+.ClearButton:active{
+    transform: scale(0.95);
+    transition-duration: 0s;
+    box-shadow: 0px 0px 1vh 0px red;
+    background-color: #452222;
+}
+
+}

@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(0, 73, 100));
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media screen and (max-height: 15cm) {
+  .App {
+    text-align: center;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(0, 73, 100));
+    display: grid;
+    height: fit-content;
+    width: 100vw;
+  }
 }
 
 .App-logo {
@@ -14,7 +28,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
